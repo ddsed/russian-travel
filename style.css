@@ -40,9 +40,18 @@
   text-decoration: underline;
 }
 
+.content {
+  max-width: 1280px;
+  min-width: 320px;
+
+  margin: 0 auto;
+  padding: 0;
+}
+
 .lead {
   margin: 56px auto 0;
   width: calc(100vw - 296px);
+  max-width: 1280px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -142,13 +151,14 @@
 .places {
   margin: 0 auto;
   width: calc(100vw - 296px);
+  max-width: 1280px;
 }
 
 .places__grid-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
   margin: 0;
   padding: 0;
 }
@@ -164,6 +174,10 @@
   gap: 48px 40px;
 
   margin-bottom: 80px;
+}
+
+.place:last-child {
+  margin-bottom: 0;
 }
 
 .place__title {
@@ -215,6 +229,7 @@
 
 .place__paragraph {
   width: 100%;
+  min-width: 456px;
   font-weight: 400;
   font-size: 18px;
   line-height: 163%;
@@ -230,7 +245,48 @@
   grid-area: paragraph;
 }
 
+.cover {
+  margin: 92px auto;
+  width: calc(100% - 2 * 48px);
+  max-width: 1280px;
+  background-image: url(./images/cover-trains.jpg);
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
 
+.cover__link {
+  display:block;
+  background: rgba(42, 44, 47, 0.3);
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.cover__link:hover {
+  display:block;
+  background: rgba(42, 44, 47, 0.8);
+}
+
+.cover__title {
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 76px;
+  text-align: center;
+
+  margin: 0;
+  padding: 245px calc((100% - 560px) / 2) 0;
+  margin-bottom: 32px;
+}
+
+.cover__subtitle {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+
+  margin: 0;
+  padding: 0 calc((100% - 360px) / 2) 245px;
+}
 
 
 /* Media */
@@ -252,6 +308,66 @@
 
   .photo-grid__container {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .places {
+    width: calc(100vw - 96px);
+  }
+
+  .place {
+    column-gap: 32px;
+  }
+
+  .place__image {
+    max-width: 440px;
+    max-height: 440px;
+  }
+
+  .cover {
+    width: 100%;
+  }
+
+  .cover__title {
+    padding-top: 195px;
+  }
+
+  .cover__subtitle {
+    padding-bottom: 195px;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  .places {
+    width: calc(100vw - 48px);
+  }
+
+  .place {
+    column-gap: 28px;
+    margin-bottom: 73px;
+  }
+
+  .place__title {
+    font-size: 42px;
+    line-height: 46px;
+  }
+
+  .place__title_size {
+    max-width: 300px;
+  }
+
+  .place__image {
+    max-width: 340px;
+    max-height: 340px;
+  }
+
+  .place__paragraph {
+    font-size: 16px;
+    width: 100%;
+    min-width: 352px;
+  }
+
+  .place__paragraph:first-child {
+    margin-bottom: 25px;
   }
 }
 
@@ -280,6 +396,55 @@
   .photo-grid__container {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .cover {
+    margin: 90px auto 88px;
+  }
+
+  .cover__title {
+    padding-top: 115px;
+  }
+
+  .cover__subtitle {
+    padding-bottom: 115px;
+  }
+}
+
+@media screen and (max-width:740px) {
+  .place {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: none;
+    grid-template-rows: none;
+    grid-template-areas: none;
+    gap: unset;
+
+    margin-bottom: 50px;
+  }
+
+  .place__title {
+    align-self: flex-start;
+  }
+
+  .place__title_size {
+    max-width: 100%;
+  }
+
+  .place__website {
+    margin: 32px 0;
+  }
+
+  .place__image {
+    min-width: 100vw;
+    object-fit: cover;
+    align-self: center;
+
+  }
+
+  .place__paragraph-container {
+    margin-top: 32px;
+  }
 }
 
 @media screen and (max-width: 685px) {
@@ -302,6 +467,23 @@
   }
 }
 
+@media screen and (max-width: 540px) {
+  .cover {
+    margin: 66px auto 64px;
+  }
+
+  .cover__title {
+    font-size: 32px;
+    line-height: 35px;
+    padding: 33px calc((100% - 288px) / 2) 0;
+  }
+
+  .cover__subtitle {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 0 calc((100% - 288px) / 2) 33px;
+  }
+}
 
 @media screen and (max-width: 485px) {
   .page {
@@ -353,5 +535,15 @@
 
   .photo-grid__container {
     grid-template-columns: 1fr;
+  }
+
+  .place__image {
+    max-width: 320px;
+    max-height: 320px;
+  }
+
+  .place__paragraph {
+    width: 100%;
+    min-width: 288px;
   }
 }
