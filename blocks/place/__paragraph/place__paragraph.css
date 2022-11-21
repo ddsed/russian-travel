@@ -1,0 +1,32 @@
+.place__paragraph {
+  width: 100%;
+  min-width: 456px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 163%;
+
+  margin: 0;
+}
+
+.place__paragraph:first-child {
+  margin-bottom: 26px;
+}
+
+@media screen and (max-width: 970px) {
+  .place__paragraph {
+    font-size: 16px;
+    width: 100%;
+    min-width: 352px;
+  }
+
+  .place__paragraph:first-child {
+    margin-bottom: 25px;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .place__paragraph {
+    width: 100%;
+    min-width: 288px;
+  }
+}
