@@ -1,12 +1,11 @@
-# Учебный проект: Путешествие по России  
+# Study project: Travelling across Russia  
 
-Здесь будет проект о путешествии по России.
-Проект верстался по макету из Figma, в котором отображено, как лендинг должен выглядеть на самых распространённых разрешениях экранов.  
+The project is a landing page about travelling destinations within Russia.
 
-Изученные и использованные технологии:  
+Tech stack and tools:  
 
-* _HTML:_ методология БЭМ, идентификаторы, псевдоклассы, iframe, верстка форм;  
-* _CSS:_ flex-box, grid-layout, адаптивная верстка, использование относительных величин, media queries;  
-* _GIT:_ работа с ветками, деплой.  
+* _HTML:_ pseudo-classes, iframe, forms;  
+* _CSS:_ flex-box, grid-layout, adaptive layout, media queries;  
+* _GIT:_ branches, deploy.  
 
-Реализацию проекта можно увидеть [тут](https://ddsed.github.io/russian-travel/)    
+[Deploy link](https://ddsed.github.io/russian-travel/)    
